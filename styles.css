@@ -99,27 +99,182 @@
     height: 50px;
     border-radius: 50%;
     background-color: #f0f0f0;
-    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
-    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .dark-mode-toggle:hover {
-    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    background-color: #ddd;
 }
 
 .dark-mode-toggle i {
     font-size: 24px;
 }
 
-/* Additional styles for dark mode */
-.dark-mode .dark-mode-toggle {
-    background-color: #333;
-    color: #fff;
+.neomorphic-card {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.dark-mode .dark-mode-toggle:hover {
-    box-shadow: 8px 8px 16px #333333, -8px -8px 16px #666666;
+.neomorphic-input input,
+.neomorphic-button {
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .neomorphic-card {
+    background-color: #333;
+}
+
+.dark-mode .neomorphic-input input,
+.dark-mode .neomorphic-button {
+    box-shadow: none; /* Remove box shadow */
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.neomorphic-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.neomorphic-icon:hover {
+    background-color: #ddd;
+}
+
+.neomorphic-icon i {
+    font-size: 20px;
+}
+
+.neomorphic-card {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.neomorphic-input input,
+.neomorphic-button {
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .neomorphic-card {
+    background-color: #333;
+}
+
+.dark-mode .neomorphic-input input,
+.dark-mode .neomorphic-button {
+    box-shadow: none; /* Remove box shadow */
+}
+.container {
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .container {
+    box-shadow: none; /* Remove box shadow */
+}
+.neomorphic-card {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .neomorphic-card {
+    box-shadow: none; /* Remove box shadow */
+}
+/* Add your custom styles here */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.neomorphic-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neomorphic-icon:hover {
+    background-color: #ddd;
+}
+
+.neomorphic-icon i {
+    font-size: 20px;
+}
+
+/* Additional styles for dark mode */
+.dark-mode .neomorphic-icon {
+    box-shadow: none; /* Remove box shadow */
+}
+body {
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333; /* Default color for light mode */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ddd;
+}
+
+.dark-mode-toggle i {
+    font-size: 24px;
+    display: none; /* Initially hide both icons */
+}
+
+.dark-mode-toggle .fa-moon {
+    display: block; /* Show dark mode icon */
+}
+
+/* Additional styles for dark mode */
+.dark-mode .dark-mode-toggle {
+    color: #fff; /* Color for dark mode */
+}
+
+.dark-mode .dark-mode-toggle .fa-moon {
+    display: none; /* Hide dark mode icon when dark mode is enabled */
+}
+
+.dark-mode .dark-mode-toggle .fa-sun {
+    display: block; /* Show light mode icon when dark mode is enabled */
 }
