@@ -10,6 +10,12 @@
     border-radius: 50%;
     display: block;
     margin: 0 auto;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
 }
 
 .neomorphic-card {
