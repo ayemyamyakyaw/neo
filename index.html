@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-rRr9tDr+BcVm/LXyLgNbSo3e22alBWIf5CJAqZLe4s2yLRoHHd3ntBym/3rVfz7Jra27jtHyr09ehqdxOL1N0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,7 +14,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .container {
@@ -31,6 +28,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 10px 10px 20px #bfbfbf, -10px -10px 20px #ffffff;
         }
 
         .header {
@@ -57,6 +59,7 @@
         label {
             display: block;
             margin-bottom: 5px;
+            color: #333;
         }
 
         input[type="text"],
@@ -78,7 +81,7 @@
             color: #fff;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
             margin-top: 20px;
         }
@@ -91,9 +94,9 @@
             color: #ff0000;
             margin-top: 10px;
             text-align: center;
+            display: none;
         }
 
-        /* Media queries to ensure responsiveness */
         @media (max-width: 600px) {
             .container {
                 width: 90%;
@@ -127,7 +130,7 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit" class="neumorphic-button">Login</button>
-                <div id="error-message" class="error-message" style="display: none;">Incorrect username or password. Please try again.</div>
+                <div id="error-message" class="error-message">Incorrect username or password. Please try again.</div>
             </form>
         </main>
     </div>
@@ -135,6 +138,8 @@
         function checkCredentials() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
+
+            // This is just an example. In a real application, you would send a request to the server to check credentials.
             if (username === "admin" && password === "admin") {
                 window.location.href = "dashboard.html"; // Redirect to the dashboard page
                 return false; // Prevent form submission
@@ -143,17 +148,6 @@
                 return false; // Prevent form submission
             }
         }
-
-        // Adjust viewport height dynamically to prevent resizing issues when the keyboard is shown
-        function adjustViewportHeight() {
-            document.body.style.height = window.innerHeight + 'px';
-        }
-
-        // Set initial height
-        adjustViewportHeight();
-
-        // Update height on resize
-        window.addEventListener('resize', adjustViewportHeight);
     </script>
 </body>
 </html>
