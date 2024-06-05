@@ -1,104 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    grid-column: span 4;
-    margin-bottom: 20px;
-}
-
-.header-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
-    margin-bottom: 10px;
-}
-
-.server-time,
-.server-status {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 10px;
-}
-
-.server-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.status-item {
-    margin-bottom: 20px;
-}
-
-.progress {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 20px;
-    background-color: #4CAF50;
-    box-shadow: inset 4px 4px 6px #bebebe, inset -4px -4px 6px #ffffff;
-    transition: width 0.5s ease-in-out;
-}
-
-.server-status span {
-    display: inline-block;
-    width: 30%;
-    text-align: right;
-    margin-right: 10px;
-}
-
-button {
-    background-color: #e0e0e0;
-    border: none;
+    background-color: #333;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.neumorphic-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+.neumorphic-button:hover {
+    background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .header {
-        grid-column: span 2;
-    }
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
 }
-
-@media (max-width: 480px) {
-    button {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-}
-/* loginform */

@@ -3,98 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myanmar VPN Helper</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-rRr9tDr+BcVm/LXyLgNbSo3e22alBWIf5CJAqZLe4s2yLRoHHd3ntBym/3rVfz7Jra27jtHyr09ehqdxOL1N0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="logo.png" alt="Logo" class="header-logo">
-            <h1>VPN Helper</h1>
-            <div class="server-info">
-                <div id="server-time" class="server-time"></div>
-                <div id="server-status" class="server-status">
-                    <div class="status-item">
-                        <span>CPU</span>
-                        <div class="progress">
-                            <div class="progress-bar cpu-progress" style="width: 50%"></div>
-                        </div>
-                    </div>
-                    <div class="status-item">
-                        <span>RAM</span>
-                        <div class="progress">
-                            <div class="progress-bar ram-progress" style="width: 60%"></div>
-                        </div>
-                    </div>
-                    <div class="status-item">
-                        <span>NET</span>
-                        <div class="progress">
-                            <div class="progress-bar network-progress" style="width: 20%"></div>
-                        </div>
-                    </div>
+        <header class="header">
+            <img src="logo.png" alt="Logo" class="logo">
+        </header>
+        <main class="main-content">
+            <h1>Login</h1>
+            <form id="login-form" onsubmit="return checkPassword()">
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-            </div>
-        </div>
-        <button onclick="goToLink('/login.html')">Button 1</button>
-        <button onclick="goToLink('https://www.facebook.com')">Button 2</button>
-        <button onclick="goToLink('https://www.twitter.com')">Button 3</button>
-        <button onclick="goToLink('https://www.linkedin.com')">Button 4</button>
-        <button onclick="goToLink('https://www.instagram.com')">Button 5</button>
-        <button onclick="goToLink('https://www.reddit.com')">Button 6</button>
-        <button onclick="goToLink('https://www.youtube.com')">Button 7</button>
-        <button onclick="goToLink('https://www.github.com')">Button 8</button>
+                <button type="submit" class="neumorphic-button">Login</button>
+                <div id="error-message" class="error-message" style="display: none;">Incorrect password. Please try again.</div>
+            </form>
+        </main>
     </div>
-
     <script>
-        function goToLink(url) {
-            window.location.href = url;
-        }
-
-        // Server Time
-        function startServerTime(display) {
-            function updateServerTime() {
-                const now = new Date();
-                const hours = now.getHours().toString().padStart(2, '0');
-                const minutes = now.getMinutes().toString().padStart(2, '0');
-                const seconds = now.getSeconds().toString().padStart(2, '0');
-
-                display.textContent = `Server Time: ${hours}:${minutes}:${seconds}`;
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "00000") {
+                return true; // Password is correct, allow form submission
+            } else {
+                document.getElementById("error-message").style.display = "block";
+                return false; // Prevent form submission
             }
-
-            updateServerTime();
-            setInterval(updateServerTime, 1000);
         }
-
-        // Generate random values for CPU, RAM, and network usage
-        function getRandomValue() {
-            return Math.floor(Math.random() * 101); // Random value between 0 and 100
-        }
-
-        // Server Status
-        function startServerStatus() {
-            const cpuProgress = document.querySelector('.cpu-progress');
-            const ramProgress = document.querySelector('.ram-progress');
-            const networkProgress = document.querySelector('.network-progress');
-
-            function updateServerStatus() {
-                const cpuUsage = getRandomValue();
-                const ramUsage = getRandomValue();
-                const networkUsage = getRandomValue();
-
-                cpuProgress.style.width = cpuUsage + '%';
-                ramProgress.style.width = ramUsage + '%';
-                networkProgress.style.width = networkUsage + '%';
-            }
-
-            updateServerStatus();
-            setInterval(updateServerStatus, 5000); // Update every 5 seconds
-        }
-
-        window.onload = function () {
-            const timeDisplay = document.querySelector('#server-time');
-            startServerTime(timeDisplay);
-            startServerStatus();
-        };
     </script>
 </body>
 </html>
