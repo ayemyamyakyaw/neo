@@ -47,15 +47,6 @@
                 return false; // Prevent form submission
             }
         }
-
-        // Adjust the viewport when the keyboard is displayed on mobile devices
-        window.addEventListener('resize', function() {
-            if (window.innerHeight < 500) {
-                document.body.classList.add('keyboard-open');
-            } else {
-                document.body.classList.remove('keyboard-open');
-            }
-        });
     </script>
 </body>
 </html>
