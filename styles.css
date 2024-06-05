@@ -1,0 +1,42 @@
+.neomorphic-card {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.neomorphic-card:hover {
+    box-shadow: 12px 12px 24px #bebebe, -12px -12px 24px #ffffff;
+}
+
+.neomorphic-input label {
+    color: #666;
+}
+
+.neomorphic-input input {
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.neomorphic-input input:focus {
+    outline: none;
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+}
+
+.neomorphic-button {
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.neomorphic-button:hover {
+    background-color: #0056b3;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+}
