@@ -75,3 +75,106 @@ input[type="password"] {
     margin-top: 10px;
     text-align: center;
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.neumorphic-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+}
+
+.neumorphic-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-icons-container {
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+}
+
+.social-icon:hover {
+    background-color: #0056b3;
+}
