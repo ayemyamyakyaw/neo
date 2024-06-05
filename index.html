@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <img src="logo.png" alt="Logo" class="logo">
-        </div>
-    </header>
-
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <div class="neomorphic-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Log In</h5>
+                    <div class="card-body text-center">
+                        <img src="logo.png" alt="Logo" class="logo">
+                        <h5 class="card-title mt-3">Log In</h5>
                         <form id="login-form" onsubmit="return checkCredentials()">
                             <div class="form-group neomorphic-input">
                                 <label for="username">Username</label>
@@ -32,6 +28,11 @@
                             <button type="submit" class="btn btn-primary btn-block neomorphic-button">Login</button>
                             <div id="error-message" class="text-danger text-center mt-3" style="display: none;">Incorrect username or password. Please try again.</div>
                         </form>
+                    </div>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="neomorphic-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="neomorphic-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="neomorphic-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
