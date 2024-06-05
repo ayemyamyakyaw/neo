@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.neomorphic-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #e0e0e0;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.neomorphic-button:hover {
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.neomorphic-button:active {
+    box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+}
+
+/* Additional styles for dark mode */
+.dark-mode {
+    background-color: #333;
+}
+
+.dark-mode header {
+    background-color: #333;
+    box-shadow: none;
+}
+
+.dark-mode .logo {
+    box-shadow: none;
+}
+
+.dark-mode .container {
+    background-color: #333;
+    box-shadow: none;
+}
+
+.dark-mode .neomorphic-button {
+    background-color: #333;
+    box-shadow: none;
+    color: #fff;
+}
+
+.dark-mode .neomorphic-button:hover {
+    box-shadow: none;
+}
+
+.dark-mode .neomorphic-button:active {
+    box-shadow: inset 4px 4px 8px #000000, inset -4px -4px 8px #444444;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 50px; /* Adjust this value to move the button lower */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333; /* Default color for light mode */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #ddd;
+}
+
+.dark-mode-toggle i {
+    font-size: 24px;
+    display: none; /* Initially hide both icons */
+}
+
+.dark-mode-toggle .fa-moon {
+    display: block; /* Show dark mode icon */
+}
+
+.dark-mode .dark-mode-toggle {
+    color: #fff; /* Color for dark mode */
+}
+
+.dark-mode .dark-mode-toggle .fa-moon {
+    display: none; /* Hide dark mode icon when dark mode is enabled */
+}
+
+.dark-mode .dark-mode-toggle .fa-sun {
+    display: block; /* Show light mode icon when dark mode is enabled */
+}
