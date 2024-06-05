@@ -7,24 +7,24 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .header {
-    background-color: #333;
-    padding: 20px;
     text-align: center;
 }
 
@@ -71,6 +71,7 @@ input[type="password"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+    margin-top: 20px;
 }
 
 .neumorphic-button:hover {
@@ -84,8 +85,7 @@ input[type="password"] {
 }
 
 .social-card {
-    max-width: 400px;
-    margin: 20px auto;
+    margin-top: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -120,10 +120,6 @@ input[type="password"] {
 /* Media queries to ensure responsiveness */
 @media (max-width: 600px) {
     .container {
-        width: 90%;
-    }
-
-    .social-card {
         width: 90%;
     }
 
