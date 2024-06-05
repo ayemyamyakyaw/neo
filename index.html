@@ -28,7 +28,8 @@
         function checkPassword() {
             var password = document.getElementById("password").value;
             if (password === "00000") {
-                return true; // Password is correct, allow form submission
+                window.location.href = "dashboard.html"; // Redirect to the dashboard page
+                return false; // Prevent form submission
             } else {
                 document.getElementById("error-message").style.display = "block";
                 return false; // Prevent form submission
