@@ -9,6 +9,15 @@
 </head>
 <body>
     <header>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="logo.png" alt="Slide 1" class="slider-image"></div>
+                <div class="slide"><img src="logo.png" alt="Slide 2" class="slider-image"></div>
+                <div class="slide"><img src="logo.png" alt="Slide 3" class="slider-image"></div>
+                <div class="slide"><img src="logo.png" alt="Slide 4" class="slider-image"></div>
+                <div class="slide"><img src="logo.png" alt="Slide 5" class="slider-image"></div>
+            </div>
+        </div>
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
         </div>
@@ -25,10 +34,10 @@
             <button class="neomorphic-button" onclick="window.location.href='https://pinterest.com'">Pinterest</button>
         </div>
     </main>
-    <button id="dark-mode-toggle" class="neomorphic-button dark-mode-toggle">
-        <i class="fas fa-moon"></i> <!-- Dark mode icon -->
-        <i class="far fa-sun"></i> <!-- Light mode icon -->
-    </button>
+    <div class="dark-mode-toggle" id="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

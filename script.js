@@ -14,8 +14,17 @@ function checkCredentials() {
 }
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
 
 darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 });
 
+function showNextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+setInterval(showNextSlide, 3000);

@@ -12,25 +12,51 @@ body {
 
 header {
     width: 100%;
-    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #e0e0e0;
+    padding: 10px 0;
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+.slider-container {
+    width: 80%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-image {
+    width: 100%;
+    border-radius: 15px;
 }
 
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
 .container {
@@ -81,7 +107,8 @@ header {
     box-shadow: none;
 }
 
-.dark-mode .logo {
+.dark-mode .logo-container {
+    background-color: #333;
     box-shadow: none;
 }
 
@@ -106,7 +133,7 @@ header {
 
 .dark-mode-toggle {
     position: fixed;
-    bottom: 50px; /* Adjust this value to move the button lower */
+    bottom: 30px;
     right: 20px;
     width: 50px;
     height: 50px;
