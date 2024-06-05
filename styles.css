@@ -1,136 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
-
-::selection {
-    background: #2D2F36;
+* {
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
   }
-  
-  body {
-    background: white;
-    font-family: 'Inter UI', sans-serif;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
-  }
-  .page {
-    background: #B30049;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 40px);
-    position: absolute;
-    place-content: center;
-    width: calc(100% - 40px);
-  }
-  @media (max-width: 767px) {
-    .page {
-      height: auto;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-    }
-  }
-  .container {
-    display: flex;
-    height: 320px;
-    margin: 0 auto;
-    width: 640px;
-  }
-  @media (max-width: 767px) {
-    .container {
-      flex-direction: column;
-      height: 630px;
-      width: 320px;
-    }
-  }
-  .left {
-    background: white;
-    height: calc(100% - 40px);
-    top: 20px;
-    position: relative;
-    width: 50%;
-  }
-  @media (max-width: 767px) {
-    .left {
-      height: 100%;
-      left: 20px;
-      width: calc(100% - 40px);
-      max-height: 270px;
-    }
-  }
-  .login {
-    color: #B30049;
-    font-size: 50px;
-    font-weight: 800;
-    margin: 50px 40px 40px;
-  }
-  .eula {
-    color: #828282;
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 400;
-    margin: 40px;
-  }
-  .right {
-    background: #070D0D;
-    box-shadow: -20px 0px 34px -10px rgba(0,0,0,0.75);
-    color: #F1F1F2;
-    position: relative;
-    width: 50%;
-  }
-  @media (max-width: 767px) {
-    .right {
-      flex-shrink: 0;
-      height: 100%;
-      width: 100%;
-      max-height: 350px;
-    }
-  }
-  svg {
-    position: absolute;
-    width: 320px;
-  }
-  path {
-    fill: none;
-    stroke: url(#linearGradient);;
-    stroke-width: 4;
-    stroke-dasharray: 240 1386;
-  }
-  .form {
-    margin: 40px;
-    position: absolute;
-  }
-  label {
-    color:  #c2c2c5;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Ensure the container takes at least 80% of the viewport height */
+}
+
+.header {
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.main-content {
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
     display: block;
-    font-size: 14px;
-    height: 16px;
-    margin-top: 20px;
     margin-bottom: 5px;
-  }
-  input {
-    background: transparent;
-    border: 1px solid #EDC8FE;
-    border-radius:  25px;
-    color: #f2f2f2;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-    outline: none !important;
+}
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
-  }
-  
-  
-  #submit {
-    color: #c2c2c5;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.neumorphic-button {
     width: 100%;
-    height:  35px;
-    background: #070D0D;
-    border: 1px solid #EDC8FE;
-    border-radius:  25px;
-    margin-top: 40px;
-    transition: color 1s ease-out;
-    cursor: pointer;
-  }
-  #submit:hover{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
     color: #fff;
-  }
-  #submit:active {
-    color: #d0d0d2;
-  }
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+    margin-top: 20px;
+}
+
+.neumorphic-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-card {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 15px #bfbfbf, -5px -5px 15px #ffffff;
+}
+
+.social-icon:hover {
+    background-color: #0056b3;
+}
+
+/* Media queries to ensure responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        min-height: auto; /* Allow the container to shrink if necessary */
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        margin: 10px;
+    }
+}
