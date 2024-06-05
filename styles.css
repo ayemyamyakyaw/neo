@@ -1,3 +1,17 @@
+/* Add your custom styles here */
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.logo {
+    max-width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
 .neomorphic-card {
     background-color: #f0f0f0;
     border-radius: 15px;
