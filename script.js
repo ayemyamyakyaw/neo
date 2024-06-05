@@ -10,4 +10,11 @@ function checkCredentials() {
         document.getElementById("error-message").style.display = "block";
         return false; // Prevent form submission
     }
+    
 }
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+});
