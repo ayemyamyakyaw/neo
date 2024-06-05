@@ -43,9 +43,13 @@
             }
         }
 
-        // Ensure the viewport is properly adjusted when the keyboard is displayed
+        // Adjust the viewport when the keyboard is displayed on mobile devices
         window.addEventListener('resize', function() {
-            document.body.style.height = window.innerHeight + 'px';
+            if (window.innerHeight < 500) {
+                document.body.classList.add('keyboard-open');
+            } else {
+                document.body.classList.remove('keyboard-open');
+            }
         });
     </script>
 </body>

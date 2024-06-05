@@ -10,7 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -115,6 +116,16 @@ input[type="password"] {
 
 .social-icon:hover {
     background-color: #0056b3;
+}
+
+/* Adjustments for keyboard open state */
+body.keyboard-open {
+    height: auto;
+    min-height: 100vh;
+}
+
+body.keyboard-open .container {
+    height: 90vh;
 }
 
 /* Media queries to ensure responsiveness */
