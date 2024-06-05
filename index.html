@@ -14,13 +14,17 @@
         </header>
         <main class="main-content">
             <h1>Login</h1>
-            <form id="login-form" onsubmit="return checkPassword()">
+            <form id="login-form" onsubmit="return checkCredentials()">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
                 <div class="input-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit" class="neumorphic-button">Login</button>
-                <div id="error-message" class="error-message" style="display: none;">Incorrect password. Please try again.</div>
+                <div id="error-message" class="error-message" style="display: none;">Incorrect username or password. Please try again.</div>
             </form>
         </main>
         <div class="social-card">
@@ -32,9 +36,10 @@
         </div>
     </div>
     <script>
-        function checkPassword() {
+        function checkCredentials() {
+            var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
-            if (password === "00000") {
+            if (username === "admin" && password === "1234") {
                 window.location.href = "dashboard.html"; // Redirect to the dashboard page
                 return false; // Prevent form submission
             } else {
