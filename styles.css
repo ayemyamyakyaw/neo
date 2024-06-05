@@ -7,11 +7,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 0 auto;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -111,4 +115,23 @@ input[type="password"] {
 
 .social-icon:hover {
     background-color: #0056b3;
+}
+
+/* Media queries to ensure responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .social-card {
+        width: 90%;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        margin: 10px;
+    }
 }

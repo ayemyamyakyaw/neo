@@ -42,6 +42,11 @@
                 return false; // Prevent form submission
             }
         }
+
+        // Ensure the viewport is properly adjusted when the keyboard is displayed
+        window.addEventListener('resize', function() {
+            document.body.style.height = window.innerHeight + 'px';
+        });
     </script>
 </body>
 </html>
