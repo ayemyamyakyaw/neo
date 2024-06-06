@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Cards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="card neomorphic-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">1 Month</h5>
+                        <p class="card-text">3500ks</p>
+                        <button class="btn neomorphic-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="card neomorphic-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">1 Month</h5>
+                        <p class="card-text">3500ks</p>
+                        <button class="btn neomorphic-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="card neomorphic-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">1 Month</h5>
+                        <p class="card-text">3500ks</p>
+                        <button class="btn neomorphic-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-4">
+                <div class="card neomorphic-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">1 Month</h5>
+                        <p class="card-text">3500ks</p>
+                        <button class="btn neomorphic-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn toggle-darkmode neomorphic-button" id="darkmodeToggle">Dark Mode</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const toggle = document.getElementById('darkmodeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('darkmode');
+            if (document.body.classList.contains('darkmode')) {
+                toggle.innerText = 'Light Mode';
+            } else {
+                toggle.innerText = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>

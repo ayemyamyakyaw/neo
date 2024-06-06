@@ -1,0 +1,67 @@
+body {
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.neomorphic-card {
+    background: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.neomorphic-card:hover {
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
+
+.neomorphic-button {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.neomorphic-button:hover {
+    box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    color: #555;
+}
+
+.toggle-darkmode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Dark Mode Styles */
+body.darkmode {
+    background-color: #333;
+}
+
+body.darkmode .neomorphic-card {
+    background: #333;
+    box-shadow: none;
+    color: #fff;
+}
+
+body.darkmode .neomorphic-button {
+    background: #444;
+    box-shadow: none;
+    color: #fff;
+}
+
+body.darkmode .neomorphic-button:hover {
+    color: #ddd;
+}
