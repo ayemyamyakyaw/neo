@@ -1,0 +1,9 @@
+.neomorphic-progress {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px #bebebe, -10px -10px 15px #ffffff;
+}
+
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}

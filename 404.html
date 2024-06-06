@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error - Page Not Found</title>
+    <!-- Include Lottie library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff0000;
+            font-size: 4em;
+            margin-bottom: 30px;
+            animation: shake 0.5s infinite alternate;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: inline-block;
+            margin-top: 50px;
+        }
+        .funny-caption {
+            font-style: italic;
+            color: #666;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(10px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>404</h1>
+    <p>Oops! The page you're looking for is hiding from us!</p>
+    <!-- Add a container for the Lottie animation -->
+    <div class="image-container" id="lottie-container"></div>
+    <p class="funny-caption">Psst! I think it's behind you!</p>
+
+    <script>
+        // Load and play the Lottie animation
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('lottie-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'images/ck.json' // Replace with the path to your Lottie animation JSON file
+        });
+    </script>
+</body>
+</html>
