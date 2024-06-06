@@ -22,9 +22,8 @@ darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 });
 
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-setInterval(showNextSlide, 3000);
+$(document).ready(function(){
+    $('.carousel').carousel({
+        interval: 3000
+    });
+});

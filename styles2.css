@@ -20,43 +20,16 @@ header {
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
-.slider-container {
-    width: 80%;
-    overflow: hidden;
+.carousel-inner .carousel-item img {
     border-radius: 15px;
-    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
-    margin-bottom: 20px;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.3s ease;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.slider-image {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
 }
 
 .container {
@@ -65,28 +38,20 @@ header {
     align-items: center;
     padding: 20px;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
     background-color: #e0e0e0;
     border-radius: 20px;
 }
 
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 .neomorphic-button {
-    width: 150px;
-    height: 50px;
     border: none;
     border-radius: 25px;
     background-color: #e0e0e0;
     box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
     font-size: 16px;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 10px 20px;
 }
 
 .neomorphic-button:hover {
@@ -97,7 +62,6 @@ header {
     box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
 }
 
-/* Additional styles for dark mode */
 .dark-mode {
     background-color: #333;
 }
@@ -107,7 +71,11 @@ header {
     box-shadow: none;
 }
 
-.dark-mode .logo-container {
+.dark-mode .carousel-inner .carousel-item img {
+    box-shadow: none;
+}
+
+.dark-mode .logo {
     background-color: #333;
     box-shadow: none;
 }
@@ -139,8 +107,8 @@ header {
     height: 50px;
     border-radius: 50%;
     background-color: #f0f0f0;
-    color: #333; /* Default color for light mode */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add color transition */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,21 +120,21 @@ header {
 
 .dark-mode-toggle i {
     font-size: 24px;
-    display: none; /* Initially hide both icons */
+    display: none;
 }
 
 .dark-mode-toggle .fa-moon {
-    display: block; /* Show dark mode icon */
+    display: block;
 }
 
 .dark-mode .dark-mode-toggle {
-    color: #fff; /* Color for dark mode */
+    color: #fff;
 }
 
 .dark-mode .dark-mode-toggle .fa-moon {
-    display: none; /* Hide dark mode icon when dark mode is enabled */
+    display: none;
 }
 
 .dark-mode .dark-mode-toggle .fa-sun {
-    display: block; /* Show light mode icon when dark mode is enabled */
+    display: block;
 }

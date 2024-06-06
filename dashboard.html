@@ -4,40 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <header>
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide"><img src="logo.png" alt="Slide 1" class="slider-image"></div>
-                <div class="slide"><img src="logo.png" alt="Slide 2" class="slider-image"></div>
-                <div class="slide"><img src="logo.png" alt="Slide 3" class="slider-image"></div>
-                <div class="slide"><img src="logo.png" alt="Slide 4" class="slider-image"></div>
-                <div class="slide"><img src="logo.png" alt="Slide 5" class="slider-image"></div>
+    <header class="mb-4">
+        <div class="container">
+            <div id="headerSlider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="logo.png" class="d-block w-100 rounded" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="logo.png" class="d-block w-100 rounded" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="logo.png" class="d-block w-100 rounded" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="logo.png" class="d-block w-100 rounded" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="logo.png" class="d-block w-100 rounded" alt="Slide 5">
+                    </div>
+                </div>
             </div>
+            <!-- <div class="text-center mt-3">
+                <img src="logo.png" alt="Logo" class="logo img-fluid">
+            </div> -->
         </div>
-        <!-- <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo">
-        </div> -->
     </header>
     <main class="container">
-        <div class="button-container">
-            <button class="neomorphic-button" onclick="window.location.href='https://google.com'">Google</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://facebook.com'">Facebook</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://twitter.com'">Twitter</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://linkedin.com'">LinkedIn</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://instagram.com'">Instagram</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://youtube.com'">YouTube</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://reddit.com'">Reddit</button>
-            <button class="neomorphic-button" onclick="window.location.href='https://pinterest.com'">Pinterest</button>
+        <div class="row mb-4">
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://google.com'">Google</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://facebook.com'">Facebook</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://twitter.com'">Twitter</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://linkedin.com'">LinkedIn</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://instagram.com'">Instagram</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://youtube.com'">YouTube</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://reddit.com'">Reddit</button>
+            </div>
+            <div class="col-6 col-md-3 mb-3">
+                <button class="btn btn-block neomorphic-button" onclick="window.location.href='https://pinterest.com'">Pinterest</button>
+            </div>
         </div>
     </main>
     <div class="dark-mode-toggle" id="dark-mode-toggle">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
