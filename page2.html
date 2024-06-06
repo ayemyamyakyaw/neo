@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #2b2b2b;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+        .match-container {
+            background-color: #2b2b2b;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px #1b1b1b, -5px -5px 15px #3b3b3b;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 10px;
+            min-width: 100px;
+            max-width: 150px;
+            height: 100px;
+            overflow: hidden;
+        }
+        .team img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .team-name {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .match-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            margin: 10px;
+        }
+        .match-time {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .match-date {
+            margin-top: 5px;
+        }
+        @media (max-width: 576px) {
+            .match-container {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .team img {
+                width: 40px;
+                height: 40px;
+            }
+            .team-name {
+                font-size: 16px;
+            }
+            .match-time {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="match-container">
+            <div class="team">
+                <img src="image1.png" alt="Malawi">
+                <div class="team-name">Malawi</div>
+            </div>
+            <div class="match-info">
+                <div class="match-time">7:30 PM</div>
+                <div class="match-date">Today</div>
+            </div>
+            <div class="team">
+                <img src="image1.png" alt="Sao Tome and Principe">
+                <div class="team-name">Sao Tome and Principe</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
