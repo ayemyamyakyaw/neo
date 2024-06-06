@@ -14,12 +14,14 @@ function checkCredentials() {
 }
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-let currentIndex = 0;
 
 darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
 });
 
 $(document).ready(function(){
